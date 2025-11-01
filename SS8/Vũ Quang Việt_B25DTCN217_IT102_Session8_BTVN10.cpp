@@ -12,22 +12,24 @@ int main(){
 	for(int i=0;i<n;i++){
 		printf("%d ", arr[i]);
 	}
+	int foundPrime=0;
 	printf("\nCac so nguyen to trong mang la: ");
 	for(int i=0;i<n;i++){
 		if(arr[i]<=1){
 			continue;
 		}
-		int isPrime=0;
+		int isPrime=1;
 		for(int j=2; j<arr[i]; j++){
 			if(arr[i]%j==0){
 			  isPrime=0;
+			  break;
 			}
 		}
-		if(isPrime==1){
+		if(isPrime){
 		    printf("%d ", arr[i]);
-		}else{ 
-		    printf("Mang ko co so nguyen to");
+		    foundPrime=1;
+		if(!foundPrime){
+			printf("Mang ko co so nguyen to");     
 		}
 	}
-}
-
+}}
