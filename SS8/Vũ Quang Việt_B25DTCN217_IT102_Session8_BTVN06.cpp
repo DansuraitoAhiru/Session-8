@@ -7,6 +7,11 @@ int main(){
 		}else{
 			arr[i]=arr[i]+2;
 		}
-	printf("[ %d ]", arr[i]);
+	printf("[");
+    for(i = 0; i < 5; i++) {
+        printf("%d", arr[i]);
+        if(i < 4) printf(",");
+    }
+    printf("]\n");
 	}
 }
